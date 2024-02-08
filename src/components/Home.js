@@ -7,7 +7,9 @@ import {
   Spinner,
   Spacer,
   Center,
+  Link
 } from "@chakra-ui/react";
+import { ExternalLinkIcon } from '@chakra-ui/icons';
 import { RestaurantsList } from './restaurantsList';
 
 
@@ -42,7 +44,13 @@ export const Home = () => {
   return (
     <Flex direction="column" align="center">
       <form onSubmit={(e) => e.preventDefault()}>
-        <Text>検索範囲を選んでください</Text>
+        <Text
+          fontSize="lg"
+          mt={4}
+          mb={2}
+        >
+          検索範囲を選んでください
+        </Text>
         <Select
           size="lg"
           value={searchRange}
@@ -59,21 +67,40 @@ export const Home = () => {
           colorScheme="teal" 
           size="lg" 
           mt={4}
+          ml={4}
           onClick={() => getUserLocation()}
         >
           現在地から検索
         </Button>
       </form>
       {loading && (
-        <Center>
-          <Spinner />
+        <Center
+          mt={4}
+          direction="column"
+          mb={4}
+        >
+          <Spinner 
+            speed='0.65s'
+          />
           <Spacer />
-          <Text>検索中...</Text>
+          <Text
+            ml={2}
+          >
+            検索中...
+          </Text>
         </Center>
       )}
 
       {userLocation.latitude && userLocation.longitude && (
-        <Text>緯度：{userLocation.latitude}、経度：{userLocation.longitude}</Text>
+        <Link 
+          fontSize='lg'
+          mt={4}
+          href={`https://maps.google.co.jp/maps?q=${userLocation.latitude},${userLocation.longitude}`} 
+          isExternal
+        >
+          緯度：{userLocation.latitude}、経度：{userLocation.longitude}
+          <ExternalLinkIcon ml={1} />
+        </Link>
       )}
 
       <RestaurantsList userLocation={userLocation} searchRange={searchRange} />

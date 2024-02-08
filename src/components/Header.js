@@ -1,21 +1,19 @@
 import {
-  Flex,
-  Spacer,
+  Center,
   Heading,
   Container,
-  Box,
+  Box
 } from "@chakra-ui/react";
 
 export const Header = () => {
   return (
     <Box bg="gray.100" p={4}>
       <Container maxW="container.lg">
-        <Flex>
-          <Heading size="md">
-            Restaurant Search App
+        <Center>
+          <Heading as="h1">
+            <a href="/">Restaurant Search App</a>
           </Heading>
-          <Spacer />
-        </Flex>
+        </Center>
       </Container>
     </Box>
   );
