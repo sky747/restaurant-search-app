@@ -22,7 +22,7 @@ export const RestaurantsList = ({ userLocation, searchRange }) => {
     if (userLocation.latitude && userLocation.longitude) {
       getRestaurants();
     }
-  }, [userLocation.latitude, userLocation.longitude, searchRange, currentPage]);
+  }, [userLocation.latitude, userLocation.longitude]);
 
   const getRestaurants = async () => {
     try {
