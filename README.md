@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# 簡易仕様書  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 作者  
+今村大輝  
 
-## Available Scripts
+### アプリ名  
+Restaurant Search App  
 
-In the project directory, you can run:
+#### コンセプト  
+近くのレストランが簡単に見つかる。  
 
-### `npm start`
+#### こだわったポイント  
+- 詳細画面にて主要な情報のみを表示し、  
+そこでより気になったお店はホットペッパーグルメから予約を行えるような動線を意識した。  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 該当プロジェクトのリポジトリ URL（GitHub,GitLab など Git ホスティングサービスを利用されている場合）  
+https://github.com/sky747/restaurant-search-app  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 開発環境  
+### 開発環境  
+Visual Studio Code 1.85.2  
 
-### `npm test`
+### 開発言語  
+JavaScript  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### ライブラリ  
+react@18.2.0  
 
-### `npm run build`
+### フレームワーク  
+express@4.18.2  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### ミドルウェア  
+http-proxy-middleware@2.0.6  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 動作対象端末・OS  
+### 動作対象OS  
+macOS sonoma 14.0  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 動作対象ブラウザ  
+Google Chrome 121.0.6167.160  
 
-### `npm run eject`
+## 開発期間  
+5日間  
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## アプリケーション機能  
+### 機能一覧  
+- 現在地取得: geolocation APIを用いて現在地を取得する。  
+- レストラン検索: 現在地からの範囲を指定した後に、その範囲内にあるレストランを検索して一覧を表示する。  
+- 店舗詳細情報表示: 各店舗の予算、住所、営業時間、定休日を表示し、ホットペッパーグルメのリンクを踏むこともできる。  
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 画面一覧  
+- 検索画面: 検索半径を指定してレストランを検索する。  
+- 一覧画面: 検索結果の飲食店を一覧表示する。  
+- 詳細画面: 店舗に関する詳細情報を表示する。  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### ER図  
+![IMG_4130](https://github.com/sky747/restaurant-search-app/assets/84313673/59dd9618-893b-42a4-aaf1-a2a391afea60)  
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### データフロー図  
+![IMG_4131](https://github.com/sky747/restaurant-search-app/assets/84313673/ad56c0b3-1caa-4a7a-8852-5609762a7c5c)  
 
-## Learn More
+### 使用しているAPI,SDK,ライブラリなど  
+- ホットペッパーグルメサーチAPI  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## デザイン面でこだわったポイント  
+- 見た目はシンプルに作成し、誰でも見やすいようにした。  
+- 詳細画面をモーダルにすることで一覧ページに簡単に戻れるようにした。  
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## アドバイスして欲しいポイント  
+- カードの大きさが範囲の違いによって変わってしまう。  
+- 検索ができる時とできない時がある。  
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 自己評価  
+- reactの勉強を兼ねて開発したが、hooksやchakra ui等を用いて要求仕様を満たすことができた。  
+- より細かい検索条件を加えられる機能について、ファイル間で多くの変数の受け渡しが必要となってしまう問題の解決や、
+  綺麗なデザインの発案ができずに断念してしまった。今後実装に挑戦したい。
