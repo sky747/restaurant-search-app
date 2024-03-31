@@ -10,10 +10,6 @@ Restaurant Search App
 詳細画面にて主要な情報のみを表示し、  
 そこでより気になったお店はホットペッパーグルメから予約を行えるような動線を意識した。  
 
-### 該当プロジェクトのリポジトリ URL（GitHub,GitLab など Git ホスティングサービスを利用されている場合）  
-https://github.com/sky747/restaurant-search-app  
-<br>
-
 ## 開発環境  
 ### 開発環境  
 Visual Studio Code 1.85.2  
@@ -26,18 +22,6 @@ react@18.2.0
 
 ### フレームワーク  
 express@4.18.2  
-
-### ミドルウェア  
-http-proxy-middleware@2.0.6  
-<br>
-
-## 動作対象端末・OS  
-### 動作対象OS  
-macOS sonoma 14.0  
-
-### 動作対象ブラウザ  
-Google Chrome 121.0.6167.160  
-<br>
 
 ## 開発期間  
 5日間  
@@ -53,12 +37,6 @@ Google Chrome 121.0.6167.160
 - 検索画面: 検索半径を指定してレストランを検索する。  
 - 一覧画面: 検索結果の飲食店を一覧表示する。  
 - 詳細画面: 店舗に関する詳細情報を表示する。  
-
-### ER図  
-![IMG_4130](https://github.com/sky747/restaurant-search-app/assets/84313673/59dd9618-893b-42a4-aaf1-a2a391afea60)  
-
-### データフロー図  
-![IMG_4131](https://github.com/sky747/restaurant-search-app/assets/84313673/ad56c0b3-1caa-4a7a-8852-5609762a7c5c)  
 
 ### 使用しているAPI,SDK,ライブラリなど  
 - ホットペッパーグルメサーチAPI  
